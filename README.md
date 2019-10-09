@@ -6,6 +6,24 @@ It creates a menu entry under View menu and a command in the command palette. Cl
 
 I created an app from JupyterLab with this: https://applicationize.me/
 
+## Keyboard shortcut
+
+You can add the following into the Keybosrd Shortcuts (Advanced Settings Editor):
+
+```javascript
+"shortcuts": [
+        ...
+        {
+            "command": "full_screen:toggle",
+            "keys": [
+                "F11"
+            ],
+            "selector": "body"
+        },
+        ...
+]
+```
+
 
 ## Prerequisites
 
