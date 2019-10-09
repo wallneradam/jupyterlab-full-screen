@@ -9,9 +9,6 @@ import { ICommandPalette } from '@jupyterlab/apputils';
 import { IMainMenu } from '@jupyterlab/mainmenu';
 
 
-/**
- * Initialization data for the @wallneradam/full_screen extension.
- */
 const extension: JupyterFrontEndPlugin<void> = {
     id: '@wallneradam/full_screen',
     autoStart: true,
@@ -24,9 +21,7 @@ const extension: JupyterFrontEndPlugin<void> = {
             rfs = el.requestFullscreen,
             efs = document.exitFullscreen;
 
-        function isFullScreen() {
-            return !window.screenTop && !window.screenY
-        }
+        let isFullScreen = () => !!document.fullscreenElement;
 
         app.commands.addCommand(COMMAND, {
             label: CAPTION,
